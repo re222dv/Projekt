@@ -10,6 +10,7 @@ Projektmedlemmar:
 
 ## Beskrivning av projektet
 *En kort och koncis beskrivning av projektet. Vad är det ni vill skapa? Varför? Hur fick ni idén?*
+
 Jag ska göra ett frontend musikspelare, en fullständig version skulle till exempel vara en fjärrkontroll till Clementine
 eller en klient till MPD.
 
@@ -26,19 +27,23 @@ samma information som ska visas.
 
 ## Tekniker
 *Vilka tekniker kommer att användas? Kommer ni att använda några ramverk? CSS-preprocessors?*
+
 Förutom standard HTML och CSS ska jag använda mig av Sass då det kan vara en bra teknologi att kunna och förhoppningsvis
 så kan det även underlätta arbetet en del.
 
 ## Begränsningar
 *Eventuella begränsningar i projektet. Kanske kommer viss funktionalitet att fejkas eftersom ni inte besitter kunskaper att skapa detta ännu?*
+
 Det kommer inte finnas någon integration med nån musikspelare utan all info kommer vara för demonstrationssyte och helt
 statisk. Därför kommer inte heller funktioner som att byta låt eller sökningar att fungera.
 
 ## Förstudier
 *Eventuellt redan existerande prototyper, användarundersökningar etc. Kanske gör ni om en befintlig webbplats? Beskriv då det här.*
+
 Inga specifika förstudier har gjorts förutom att jag har använt väldigt många musikspelare på olika plattformar och har
 en ganska bra bild om hur gränsnittet ska utformas.
 
 ## Tidsplanering
 *Länka till tidsplaneringen här, eller fäll in som en bild.*
+
 [Tidsplanering som PDF](https://raw.github.com/re222dv/Projekt/master/doc/tidsplanering.pdf)
