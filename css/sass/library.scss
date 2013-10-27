@@ -1,0 +1,47 @@
+main {
+    #nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 4.1em;
+
+        background-image: linear-gradient(180deg, #626055 0%, #42413c 100%);
+
+        ul {
+            margin: 0;
+            padding: 0;
+
+            width: 100%;
+            height: 100%;
+
+            list-style: none;
+
+            li {
+                display: block;
+                float: left;
+
+                width: 33%;
+                height: 100%;
+
+                a {
+                    display: block;
+
+                    width: 100%;
+                    height: 100%;
+
+                    color: white;
+
+                    text-align: center;
+                    text-decoration: none;
+                    line-height: 4.1em;
+                }
+            }
+
+            li + li a {
+                border-left: 1px solid white;
+            }
+        }
+    }
+}
