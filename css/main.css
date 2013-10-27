@@ -42,8 +42,10 @@ main #library {
   background-position: center;
   background-size: cover; }
   main #library ul {
-    margin-top: 1em;
+    margin: 0;
+    padding-top: 1em;
     padding-left: 1em;
+    padding-bottom: 1em;
     width: calc(100% - 2em);
     height: calc(100% - 2em);
     overflow-x: hidden;
