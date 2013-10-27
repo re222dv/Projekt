@@ -38,7 +38,49 @@ main #library {
   left: 0;
   width: 100%;
   height: calc(100% - 4.1em - 5em);
-  background-color: #2d2c27; }
+  background-image: url("pics/coverdark.svg");
+  background-position: center;
+  background-size: cover; }
+  main #library ul {
+    margin-top: 1em;
+    padding-left: 1em;
+    width: calc(100% - 2em);
+    height: calc(100% - 2em);
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style: none; }
+    main #library ul li {
+      position: relative;
+      margin-top: 1em;
+      height: 4em;
+      padding: 0.5em;
+      background-image: linear-gradient(180deg, rgba(35, 34, 30, 0.6) 0%, rgba(45, 44, 39, 0.6) 40%, rgba(45, 44, 39, 0.6) 60%, rgba(35, 34, 30, 0.6) 100%);
+      border-radius: 15px; }
+      main #library ul li img {
+        width: 4em;
+        height: 4em;
+        border-radius: 10px; }
+      main #library ul li span {
+        display: block;
+        position: absolute;
+        left: 0;
+        padding-left: 5rem;
+        width: 100%;
+        font-size: 1em; }
+      main #library ul li .name {
+        top: 0.5rem;
+        font-size: 1.2em; }
+      main #library ul li .artist {
+        top: 1.9em; }
+      main #library ul li .year {
+        top: 3.1em; }
+      main #library ul li ul {
+        display: none; }
+  main #library #artists .name {
+    top: 0;
+    height: 4em;
+    line-height: 3.5em;
+    font-size: 1.3em; }
 
 #now_playing {
   position: fixed;
