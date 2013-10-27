@@ -81,6 +81,84 @@ main #library {
     height: 4em;
     line-height: 3.5em;
     font-size: 1.3em; }
+main #search {
+  position: fixed;
+  top: 4.1em;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 4.1em - 5em);
+  background-image: url("pics/coverdark.svg");
+  background-position: center;
+  background-size: cover; }
+  main #search form {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    background-image: linear-gradient(180deg, rgba(35, 34, 30, 0.6) 0%, rgba(45, 44, 39, 0.6) 40%, rgba(45, 44, 39, 0.6) 60%, rgba(35, 34, 30, 0.6) 100%); }
+    main #search form label {
+      display: none; }
+    main #search form input {
+      padding: 5px;
+      color: white;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 5px;
+      font-weight: bold; }
+    main #search form input[type=text] {
+      width: calc(100% - 95px); }
+    main #search form input[type=submit] {
+      width: 65px; }
+main #search > ul {
+  position: absolute;
+  top: 3em;
+  margin: 0;
+  padding-top: 0;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  width: calc(100% - 2em);
+  height: calc(100% - 3.5em);
+  list-style: none;
+  overflow-x: hidden;
+  overflow-y: auto; }
+  main #search > ul h1 {
+    margin-bottom: 0; }
+  main #search > ul ul {
+    padding: 0;
+    overflow: hidden; }
+    main #search > ul ul li {
+      position: relative;
+      margin-top: 1em;
+      height: 4em;
+      padding: 0.5em;
+      background-image: linear-gradient(180deg, rgba(35, 34, 30, 0.6) 0%, rgba(45, 44, 39, 0.6) 40%, rgba(45, 44, 39, 0.6) 60%, rgba(35, 34, 30, 0.6) 100%);
+      border-radius: 15px; }
+    main #search > ul ul img {
+      width: 4em;
+      height: 4em;
+      border-radius: 10px; }
+    main #search > ul ul span {
+      display: block;
+      position: absolute;
+      left: 0;
+      padding-left: 5rem;
+      width: 100%;
+      font-size: 1em; }
+    main #search > ul ul .name {
+      top: 0.5rem;
+      font-size: 1.2em; }
+    main #search > ul ul .artist {
+      top: 1.9em; }
+    main #search > ul ul .album, main #search > ul ul .year {
+      top: 3.1em; }
+  main #search > ul #artists .name {
+    top: 0;
+    height: 4em;
+    line-height: 3.5em;
+    font-size: 1.3em; }
+main ul:last-of-child {
+  background-color: red; }
 
 #now_playing {
   position: fixed;
