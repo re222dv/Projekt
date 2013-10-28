@@ -99,8 +99,11 @@ main {
                 transition: none;
 
                 a {
+                    position: relative;
                     display: block;
+                    width: 100%;
                     height: 4em;
+                    z-index: 50;
 
                     color: white;
                 }
@@ -149,10 +152,8 @@ main {
 
                 ul {
                     margin: 1em;
-                    margin-top: 0em;
+                    margin-top: 0.5em;
                     padding: 1em 0;
-
-                    max-height: 300px;
 
                     background-color: rgba(15, 14, 11, 0.6);
                     border-radius: 20px;
@@ -176,6 +177,42 @@ main {
 
             line-height: 3.5em;
             font-size: 1.3em;
+        }
+
+        #albums li:target {
+            max-height: 1000px;
+
+            ul {
+
+                padding: 0.4em 0 0.1em 0;
+
+                li {
+                    padding: 0;
+                    height: 3em;
+                    min-height: 1em;
+
+                    .number {
+                        margin-top: -7px;
+                        padding: 0;
+                        width: 3rem;
+                        height: 3rem;
+
+                        color: rgba(225, 225, 225, 0.69);
+
+                        font-size: 3em;
+                        text-align: right;
+                    }
+
+                    .name {
+                        padding-left: 4rem;
+
+                        width: calc(100% - 4rem);
+
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+            }
         }
     }
 
