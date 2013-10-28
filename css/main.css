@@ -250,6 +250,10 @@ main {
       border: 2px solid white;
       border-radius: 5px;
       background-image: url("pics/up.svg"); }
+    main #info a:hover, main #info a:focus, main #info a:active {
+      border-color: #dd4814;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-image: url("pics/upglow.svg"); }
   main #albumart {
     position: absolute;
     top: 4.1em;
@@ -289,14 +293,20 @@ main {
     main #controls #prev_button {
       right: 135px;
       background-image: url("pics/prev.svg"); }
+    main #controls #prev_button:hover, main #controls #prev_button:focus, main #controls #prev_button:active {
+      background-image: url("pics/prevglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 21px, transparent 22px); }
     main #controls #play_button {
       bottom: calc(3em - 37.5px);
       width: 75px;
       height: 75px;
       background-image: url("pics/play.svg"); }
+    main #controls #play_button:hover, main #controls #play_button:focus, main #controls #play_button:active {
+      background-image: url("pics/playglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 31px, transparent 32px); }
     main #controls #next_button {
       left: 135px;
       background-image: url("pics/next.svg"); }
+    main #controls #next_button:hover, main #controls #next_button:focus, main #controls #next_button:active {
+      background-image: url("pics/nextglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 21px, transparent 22px); }
     main #controls #queue_button, main #controls #lyrics_button {
       left: 18.5px;
       bottom: calc(3em - 18.5px);
@@ -309,6 +319,14 @@ main {
     main #controls #lyrics_button {
       left: calc(100% - 55.5px);
       background-image: url("pics/lyrics.svg"); }
+    main #controls #queue_button:hover, main #controls #queue_button:focus, main #controls #queue_button:active {
+      border-color: #dd4814;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-image: url("pics/queueglow.svg"); }
+    main #controls #lyrics_button:hover, main #controls #lyrics_button:focus, main #controls #lyrics_button:active {
+      border-color: #dd4814;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-image: url("pics/lyricsglow.svg"); }
 
 #queue {
   position: fixed;
