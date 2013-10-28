@@ -49,5 +49,22 @@ main {
 
             font-size: 1em;
         }
+
+        a {
+            display: block;
+            position: absolute;
+            top: 0.7em;
+            right: 0.7em;
+
+            width: calc(2.6em - 4px);
+            height: calc(2.6em - 4px);
+
+            color: transparent;
+            background-size: cover;
+
+            border: 2px solid white;
+            border-radius: 5px;
+            background-image: url("pics/up.svg");
+        }
     }
 }
