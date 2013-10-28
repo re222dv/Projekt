@@ -222,6 +222,7 @@ main {
       display: block;
       margin-top: 1ex;
       margin-left: 0.6rem;
+      height: 24px;
       font-size: 1.3em;
       width: 100%; }
     main #info .artist {
