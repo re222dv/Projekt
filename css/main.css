@@ -59,10 +59,17 @@ main #library {
     main #library ul li {
       position: relative;
       margin-top: 1em;
-      height: 4em;
+      min-height: 4em;
+      max-height: 4em;
       padding: 0.5em;
+      overflow: hidden;
       background-image: linear-gradient(180deg, rgba(35, 34, 30, 0.6) 0%, rgba(45, 44, 39, 0.6) 40%, rgba(45, 44, 39, 0.6) 60%, rgba(35, 34, 30, 0.6) 100%);
-      border-radius: 15px; }
+      border-radius: 15px;
+      transition: none; }
+      main #library ul li a {
+        display: block;
+        height: 4em;
+        color: white; }
       main #library ul li img {
         width: 4em;
         height: 4em;
@@ -82,11 +89,24 @@ main #library {
       main #library ul li .year {
         top: 3.1em; }
       main #library ul li ul {
-        height: 0;
         overflow: hidden; }
-    main #library ul li:first-child ul {
-      height: reset; }
-  main #library #artists .name {
+    main #library ul li:target {
+      max-height: 350px;
+      transition: max-height 1s; }
+      main #library ul li:target ul {
+        margin: 1em;
+        margin-top: 0em;
+        padding: 1em 0;
+        max-height: 300px;
+        background-color: rgba(15, 14, 11, 0.6);
+        border-radius: 20px; }
+        main #library ul li:target ul li {
+          margin: 0 1em;
+          background-image: none;
+          border-radius: 0; }
+        main #library ul li:target ul li + li {
+          border-top: 1px solid #2d2c27; }
+  main #library #artists > li > a > .name {
     top: 0;
     height: 4em;
     line-height: 3.5em;

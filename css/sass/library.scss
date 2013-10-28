@@ -82,9 +82,11 @@ main {
                 position: relative;
 
                 margin-top: 1em;
-                height: 4em;
+                min-height: 4em;
+                max-height: 4em;
 
                 padding: 0.5em;
+                overflow: hidden;
 
                 background-image: linear-gradient(180deg,
                     rgba(35, 34, 30, 0.6) 0%,
@@ -93,6 +95,15 @@ main {
                     rgba(35, 34, 30, 0.6) 100%);
 
                 border-radius: 15px;
+
+                transition: none;
+
+                a {
+                    display: block;
+                    height: 4em;
+
+                    color: white;
+                }
 
                 img {
                     width: 4em;
@@ -127,12 +138,39 @@ main {
                 }
 
                 ul {
-                    display: none;
+                    overflow: hidden;
+                }
+            }
+
+            li:target {
+                max-height: 350px;
+
+                transition: max-height 1s;
+
+                ul {
+                    margin: 1em;
+                    margin-top: 0em;
+                    padding: 1em 0;
+
+                    max-height: 300px;
+
+                    background-color: rgba(15, 14, 11, 0.6);
+                    border-radius: 20px;
+
+                    li {
+                        margin: 0 1em;
+                        background-image: none;
+                        border-radius: 0;
+                    }
+
+                    li+li {
+                        border-top: 1px solid #2d2c27;
+                    }
                 }
             }
         }
 
-        #artists .name {
+        #artists>li>a>.name {
             top: 0;
             height: 4em;
 
