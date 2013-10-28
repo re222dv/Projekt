@@ -274,6 +274,18 @@ main {
                 top: 3.1em;
             }
         }
+
+        .active {
+            background-image: linear-gradient(180deg,
+                    rgba(35, 34, 30, 0.6) 0%,
+                    rgba(45, 44, 39, 0.6) 40%,
+                    rgba(45, 44, 39, 0.6) 60%,
+                    rgba(35, 34, 30, 0.6) 100%),
+                linear-gradient(130deg,
+                    #77216F 10%,
+                    transparent 40%,
+                    #dd4814 90%);
+        }
     }
 
     a {
