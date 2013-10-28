@@ -78,9 +78,40 @@ main {
 
         background-image: linear-gradient(180deg, #3c3b37 0%, #42413c 100%);
 
-        #queue_button, #lyrics_button {
+        a {
             display: block;
             position: absolute;
+            left: 0;
+            right: 0;
+            bottom: calc(3em - 27.5px);
+            margin: 0 auto;
+
+            width: 55px;
+            height: 55px;
+
+            color: transparent;
+            background-size: cover;
+        }
+
+        #prev_button {
+            right: 135px;
+            background-image: url("pics/prev.svg");
+        }
+
+        #play_button {
+            bottom: calc(3em - 37.5px);
+
+            width: 75px;
+            height: 75px;
+
+            background-image: url("pics/play.svg");
+        }
+        #next_button {
+            left: 135px;
+            background-image: url("pics/next.svg");
+        }
+
+        #queue_button, #lyrics_button {
             left: 18.5px;
             bottom: calc(3em - 18.5px);
             margin: 0;
@@ -88,12 +119,9 @@ main {
             width: 35px;
             height: 35px;
 
-            color: transparent;
-
             border: 2px solid white;
             border-radius: 5px;
             background-image: url("pics/queue.svg");
-            background-size: cover;
         }
 
         #lyrics_button {
