@@ -114,5 +114,21 @@ main {
             padding-right: 8px;
             text-align: right;
         }
+
+        .active {
+            background-image: linear-gradient(180deg,
+                transparent 0%,
+                rgba(119, 33, 111, 0.7) 30%,
+                #77216F 50%,
+                rgba(119, 33, 111, 0.7) 70%,
+                transparent 100%);
+
+            td:first-child {
+                background-image: linear-gradient(90deg,
+                    rgba(221, 72, 20, 1) 0%,
+                    rgba(221, 72, 20, 0.4) 30%,
+                    transparent 100%);
+            }
+        }
     }
 }

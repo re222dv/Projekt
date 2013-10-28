@@ -563,4 +563,8 @@ main {
       #play_queue table td:first-child, #play_queue table th:first-child {
         padding-left: 1px;
         padding-right: 8px;
-        text-align: right; } }
+        text-align: right; }
+      #play_queue table .active {
+        background-image: linear-gradient(180deg, transparent 0%, rgba(119, 33, 111, 0.7) 30%, #77216f 50%, rgba(119, 33, 111, 0.7) 70%, transparent 100%); }
+        #play_queue table .active td:first-child {
+          background-image: linear-gradient(90deg, #dd4814 0%, rgba(221, 72, 20, 0.4) 30%, transparent 100%); } }
