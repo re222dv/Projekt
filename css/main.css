@@ -20,7 +20,7 @@ main #nav {
     main #nav ul li {
       display: block;
       float: left;
-      width: 33%;
+      width: 33.3%;
       height: 100%; }
       main #nav ul li a {
         display: block;
