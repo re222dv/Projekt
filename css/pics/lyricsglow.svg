@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+     width="100px"
+     height="100px">
+    <filter id="shadow" height="130%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
+        <feOffset dx="0" dy="0" result="offsetblur"/> <!-- how much to offset -->
+        <feMerge>
+            <feMergeNode/> <!-- this contains the offset blurred image -->
+            <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+        </feMerge>
+    </filter>
+    <path d="M 30 25 L 70 25" stroke-width="10px" stroke="#dd4814" stroke-linecap="round" />
+    <path d="M 20 50 L 80 50" stroke-width="10px" stroke="#dd4814" stroke-linecap="round" />
+    <path d="M 30 75 L 70 75" stroke-width="10px" stroke="#dd4814" stroke-linecap="round" />
+</svg>
