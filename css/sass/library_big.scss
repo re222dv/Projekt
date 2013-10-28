@@ -1,0 +1,73 @@
+body {
+    display : flex;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #2d2c27;
+}
+
+main {
+    top: 15px;
+    left: 15px;
+
+    width: 320px;
+    min-width: 320px;
+    max-width: 400px;
+    height: calc(100% - 30px);
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    #library, #search {
+        height: calc(100% - 4.1em);
+    }
+}
+
+#now_playing {
+    //margin-top: calc(100% - 8rem - 20px);
+    left: 350px;
+    bottom: 15px;
+
+    height: 8rem;
+
+    background: none;
+
+    a {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        width: 8rem;
+        height: 8rem;
+    }
+
+    img {
+        top: auto;
+        left: 0;
+        bottom: 0;
+
+        height: 8rem;
+    }
+
+    .title {
+        top: auto;
+        left: calc(8rem + 15px);
+        bottom: 5rem;
+
+        font-size: 2rem;
+    }
+
+    .artist {
+        top: auto;
+        left: calc(8rem + 15px);
+        bottom: 2.8rem;
+
+        font-size: 1.7rem;
+    }
+}

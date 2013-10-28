@@ -1,6 +1,6 @@
 main {
     #nav {
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
 
@@ -53,7 +53,7 @@ main {
     }
 
     #library {
-        position: fixed;
+        position: absolute;
         top: 4.1em;
         left: 0;
 
@@ -217,7 +217,7 @@ main {
     }
 
     #search {
-        position: fixed;
+        position: absolute;
         top: 4.1em;
         left: 0;
 
@@ -361,7 +361,7 @@ main {
 }
 
 #now_playing {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
 
