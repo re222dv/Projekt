@@ -248,6 +248,9 @@ main ul:last-of-child {
 #edit_track {
   display: none; }
 
+#play_queue {
+  display: none; }
+
 main {
   position: fixed;
   top: 0;
@@ -500,8 +503,6 @@ main {
     top: 15px;
     left: 15px;
     width: 320px;
-    min-width: 320px;
-    max-width: 400px;
     height: calc(100% - 30px);
     border: 1px solid black;
     border-radius: 10px; }
@@ -533,4 +534,33 @@ main {
       top: auto;
       left: calc(8rem + 15px);
       bottom: 2.8rem;
-      font-size: 1.7rem; } }
+      font-size: 1.7rem; }
+
+  #play_queue {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 350px;
+    width: calc(100% - 365px);
+    height: calc(100% - 45px - 8rem);
+    overflow: auto;
+    border: 1px solid black;
+    border-radius: 10px; }
+    #play_queue table {
+      width: 100%;
+      border-collapse: collapse; }
+      #play_queue table thead tr:first-child {
+        background-color: #913c14; }
+      #play_queue table tr:nth-child(even) {
+        background-color: #626055; }
+      #play_queue table tr:nth-child(odd) {
+        background-color: #42413c; }
+      #play_queue table td, #play_queue table th {
+        padding: 10px 5px;
+        text-align: left;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      #play_queue table td:first-child, #play_queue table th:first-child {
+        padding-left: 1px;
+        padding-right: 8px;
+        text-align: right; } }

@@ -17,8 +17,6 @@ main {
     left: 15px;
 
     width: 320px;
-    min-width: 320px;
-    max-width: 400px;
     height: calc(100% - 30px);
 
     border: 1px solid black;
@@ -69,5 +67,52 @@ main {
         bottom: 2.8rem;
 
         font-size: 1.7rem;
+    }
+}
+
+#play_queue {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 350px;
+
+    width: calc(100% - 365px);
+    height: calc(100% - 45px - 8rem);
+
+    overflow: auto;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        thead tr:first-child {
+            background-color: #913c14;
+        }
+
+        tr:nth-child(even) {
+            background-color: #626055;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #42413c;
+
+        }
+
+        td, th {
+            padding: 10px 5px;
+
+            text-align: left;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        td:first-child, th:first-child {
+            padding-left: 1px;
+            padding-right: 8px;
+            text-align: right;
+        }
     }
 }
