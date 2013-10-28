@@ -284,7 +284,8 @@ main {
       width: 55px;
       height: 55px;
       color: transparent;
-      background-size: cover; }
+      background-size: cover;
+      border-radius: 100%; }
     main #controls #prev_button {
       right: 135px;
       background-image: url("pics/prev.svg"); }
