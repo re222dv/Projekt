@@ -249,3 +249,26 @@ main {
       border: 2px solid white;
       border-radius: 5px;
       background-image: url("pics/up.svg"); }
+  main #controls {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6em;
+    background-image: linear-gradient(180deg, #3c3b37 0%, #42413c 100%); }
+    main #controls #queue_button, main #controls #lyrics_button {
+      display: block;
+      position: absolute;
+      left: 18.5px;
+      bottom: calc(3em - 18.5px);
+      margin: 0;
+      width: 35px;
+      height: 35px;
+      color: transparent;
+      border: 2px solid white;
+      border-radius: 5px;
+      background-image: url("pics/queue.svg");
+      background-size: cover; }
+    main #controls #lyrics_button {
+      left: calc(100% - 55.5px);
+      background-image: url("pics/lyrics.svg"); }
