@@ -1,0 +1,92 @@
+main {
+    border: 0;
+}
+
+#info {
+    position: absolute;
+    left: calc(30px + 14rem);
+    bottom: 15px;
+
+    height: 12rem;
+
+    background: none;
+
+    a {
+        display: none;
+    }
+
+    span {
+        display: block;
+        margin: 0;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .artist {
+        font-size: 2.3rem;
+    }
+
+    .album {
+        font-size: 2rem;
+    }
+}
+
+#albumart {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+
+    margin: 0 auto;
+
+    width: 14rem;
+    height: 14rem;
+
+    background: none;
+
+    img {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        margin: auto;
+        width: 100%;
+    }
+}
+
+#controls {
+    display: none;
+}
+
+#lyrics {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 400px;
+    height: calc(100% - 45px);
+
+    background: none;
+
+    transition: none;
+
+    a {
+        display: none;
+    }
+
+    p {
+        margin: 0;
+        height: 100%;
+        overflow: auto;
+
+        text-align: center;
+    }
+}
+
+#queue {
+    display: none;
+}

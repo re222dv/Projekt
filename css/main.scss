@@ -7,9 +7,13 @@ body {
 }
 
 @import 'sass/library';
-@import 'sass/now_playing';
+
+@media only screen and (max-width: 800px) {
+    @import 'sass/now_playing';
+}
 
 @media only screen and (min-width: 800px) {
     @import 'sass/library_big';
+    @import 'sass/now_playing_big';
 }
 
