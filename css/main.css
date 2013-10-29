@@ -274,6 +274,7 @@ main #search > ul {
   display: none; }
 
 @media only screen and (max-width: 800px) {
+  @import url(http://fonts.googleapis.com/css?family=Delius+Swash+Caps);
   main #info {
     position: absolute;
     top: 0;
@@ -482,10 +483,11 @@ main #search > ul {
       height: 100%;
       overflow-x: hidden;
       overflow-y: auto;
+      font-family: 'Delius Swash Caps', cursive;
       font-size: 1.2em;
       line-height: 120%;
       text-align: center;
-      text-shadow: 0px 0px 2px black; }
+      text-shadow: 0 0 5px black; }
     #lyrics a {
       display: block;
       position: absolute;
@@ -655,6 +657,7 @@ main #search > ul {
         #play_queue table .active td:first-child {
           background-image: linear-gradient(90deg, #dd4814 0%, rgba(221, 72, 20, 0.4) 30%, transparent 100%); }
 
+  @import url(http://fonts.googleapis.com/css?family=Delius+Swash+Caps);
   #info {
     position: absolute;
     left: calc(30px + 14rem);
@@ -662,7 +665,20 @@ main #search > ul {
     height: 8rem;
     background: none; }
     #info a {
-      display: none; }
+      position: fixed;
+      left: calc(95px + 26rem);
+      bottom: 33px;
+      width: 35px;
+      height: 35px;
+      color: transparent;
+      background-size: cover;
+      border: 2px solid white;
+      border-radius: 5px;
+      background-image: url("pics/up.svg"); }
+    #info a:hover, #info a:focus, #info a:active {
+      border-color: #dd4814;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-image: url("pics/upglow.svg"); }
     #info span {
       display: block;
       margin: 0; }
@@ -757,7 +773,10 @@ main #search > ul {
       margin: 0;
       height: 100%;
       overflow: auto;
-      text-align: center; }
+      font-family: 'Delius Swash Caps', cursive;
+      font-size: 1.2rem;
+      text-align: center;
+      text-shadow: 0 0 5px black; }
 
   #queue {
     position: fixed;

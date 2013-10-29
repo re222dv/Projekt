@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Delius+Swash+Caps);
+
 #info {
     position: absolute;
     left: calc(30px + 14rem);
@@ -8,7 +10,25 @@
     background: none;
 
     a {
-        display: none;
+        position: fixed;
+        left: calc(95px + 26rem);
+        bottom: 33px;
+
+        width: 35px;
+        height: 35px;
+
+        color: transparent;
+        background-size: cover;
+
+        border: 2px solid white;
+        border-radius: 5px;
+        background-image: url("pics/up.svg");
+    }
+
+    a:hover, a:focus, a:active {
+        border-color: #dd4814;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-image: url("pics/upglow.svg");
     }
 
     span {
@@ -156,7 +176,10 @@
         height: 100%;
         overflow: auto;
 
+        font-family: 'Delius Swash Caps', cursive;
+        font-size: 1.2rem;
         text-align: center;
+        text-shadow: 0 0 5px black;
     }
 }
 
