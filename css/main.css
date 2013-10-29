@@ -117,10 +117,10 @@ main #library {
           border-radius: 0; }
         main #library ul li:target ul li + li {
           border-top: 1px solid #2d2c27; }
-  main #library #artists > li > a > .name {
+  main #library #artists > li > .name {
     top: 0;
     height: 4rem;
-    line-height: 3.5rem;
+    line-height: 4.5rem;
     font-size: 1.3em; }
   main #library #albums li:target {
     max-height: 1000px; }
