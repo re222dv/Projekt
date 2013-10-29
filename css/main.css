@@ -245,7 +245,7 @@ main ul:last-of-child {
     left: 5rem;
     font-size: 1.1em; }
 
-#controls #play_button {
+#lcontrols #play_button {
   display: block;
   position: fixed;
   right: 0;
@@ -257,7 +257,7 @@ main ul:last-of-child {
   background-image: url("pics/playnoring.svg");
   background-size: cover;
   border-left: 1px solid #2d2c27; }
-#controls #play_button:hover, #controls #play_button:focus, #controls #play_button:active {
+#lcontrols #play_button:hover, #lcontrols #play_button:focus, #lcontrols #play_button:active {
   background-image: url("pics/playglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 31px, transparent 32px); }
 
 #edit_track {
@@ -517,7 +517,7 @@ main {
   main {
     top: 15px;
     left: 15px;
-    width: 320px;
+    width: 40%;
     height: calc(100% - 30px);
     border: 1px solid black;
     border-radius: 10px; }
@@ -525,9 +525,9 @@ main {
       height: calc(100% - 4.1em); }
 
   #now_playing {
-    left: 350px;
+    left: calc(40% + 30px);
     bottom: 15px;
-    width: calc(100% - 365px - 12rem);
+    width: calc(60% - 45px - 12rem);
     height: 8rem;
     overflow: hidden;
     background: none;
@@ -555,13 +555,13 @@ main {
       bottom: 2.8rem;
       font-size: 1.7rem; }
 
-  #controls {
+  #lcontrols {
     position: absolute;
     right: 15px;
     bottom: 4rem;
     width: 12rem;
     height: 4rem; }
-    #controls a {
+    #lcontrols a {
       display: block;
       position: absolute;
       left: 0;
@@ -573,34 +573,34 @@ main {
       color: transparent;
       background-size: cover;
       border-radius: 100%; }
-    #controls #prev_button {
+    #lcontrols #prev_button {
       right: 135px;
       background-image: url("pics/prev.svg"); }
-    #controls #prev_button:hover, #controls #prev_button:focus, #controls #prev_button:active {
+    #lcontrols #prev_button:hover, #lcontrols #prev_button:focus, #lcontrols #prev_button:active {
       background-image: url("pics/prevglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 21px, transparent 22px); }
-    #controls #play_button {
+    #lcontrols #play_button {
       position: absolute;
       bottom: calc(2em - 37.5px);
       width: 75px;
       height: 75px;
       background-image: url("pics/play.svg"); }
-    #controls #play_button:hover, #controls #play_button:focus, #controls #play_button:active {
+    #lcontrols #play_button:hover, #lcontrols #play_button:focus, #lcontrols #play_button:active {
       background-image: url("pics/playglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 31px, transparent 32px); }
-    #controls #next_button {
+    #lcontrols #next_button {
       left: 135px;
       background-image: url("pics/next.svg"); }
-    #controls #next_button:hover, #controls #next_button:focus, #controls #next_button:active {
+    #lcontrols #next_button:hover, #lcontrols #next_button:focus, #lcontrols #next_button:active {
       background-image: url("pics/nextglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 21px, transparent 22px); }
-    #controls #progressbar {
+    #lcontrols #progressbar {
       position: fixed;
-      left: calc(365px + 8rem);
+      left: calc(40% + 45px + 8rem);
       bottom: 15px;
-      width: calc(100% - 380px - 8rem);
+      width: calc(60% - 60px - 8rem);
       height: 2rem;
       background-image: url("pics/lines.svg"), linear-gradient(180deg, #42413c 0%, #3c3a30 100%);
       border: 1px solid black;
       border-radius: 10px; }
-      #controls #progressbar #handle {
+      #lcontrols #progressbar #handle {
         display: block;
         position: absolute;
         left: 0;
@@ -614,8 +614,8 @@ main {
     display: block;
     position: absolute;
     top: 15px;
-    left: 350px;
-    width: calc(100% - 365px);
+    left: calc(40% + 30px);
+    width: calc(60% - 45px);
     height: calc(100% - 45px - 8rem);
     overflow: auto;
     border: 1px solid black;
@@ -642,3 +642,18 @@ main {
         background-image: linear-gradient(180deg, transparent 0%, rgba(119, 33, 111, 0.7) 30%, #77216f 50%, rgba(119, 33, 111, 0.7) 70%, transparent 100%); }
         #play_queue table .active td:first-child {
           background-image: linear-gradient(90deg, #dd4814 0%, rgba(221, 72, 20, 0.4) 30%, transparent 100%); } }
+@media only screen and (min-width: 800px) and (min-width: 1000px) {
+  main {
+    width: 400px; }
+
+  #now_playing {
+    left: 430px;
+    width: calc(60% - 45px - 12rem); }
+
+  #lcontrols #progressbar {
+    left: calc(445px + 8rem);
+    width: calc(100% - 460px - 8rem); }
+
+  #play_queue {
+    left: 430px;
+    width: calc(100% - 445px); } }

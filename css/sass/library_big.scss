@@ -16,7 +16,7 @@ main {
     top: 15px;
     left: 15px;
 
-    width: 320px;
+    width: 40%;
     height: calc(100% - 30px);
 
     border: 1px solid black;
@@ -28,11 +28,10 @@ main {
 }
 
 #now_playing {
-    //margin-top: calc(100% - 8rem - 20px);
-    left: 350px;
+    left: calc(40% + 30px);
     bottom: 15px;
 
-    width: calc(100% - 365px - 12rem);
+    width: calc(60% - 45px - 12rem);
     height: 8rem;
 
     overflow: hidden;
@@ -76,7 +75,7 @@ main {
     }
 }
 
-#controls {
+#lcontrols {
     position: absolute;
     right: 15px;
     bottom: 4rem;
@@ -134,10 +133,10 @@ main {
 
     #progressbar {
         position: fixed;
-        left: calc(365px + 8rem);
+        left: calc(40% + 45px + 8rem);
         bottom: 15px;
 
-        width: calc(100% - 380px - 8rem);
+        width: calc(60% - 60px - 8rem);
         height: 2rem;
 
         background-image: url("pics/lines.svg"), linear-gradient(180deg, #42413c 0%, #3c3a30 100%);
@@ -170,9 +169,9 @@ main {
     display: block;
     position: absolute;
     top: 15px;
-    left: 350px;
+    left: calc(40% + 30px);
 
-    width: calc(100% - 365px);
+    width: calc(60% - 45px);
     height: calc(100% - 45px - 8rem);
 
     overflow: auto;
@@ -226,5 +225,26 @@ main {
                     transparent 100%);
             }
         }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    main {
+        width: 400px;
+    }
+
+    #now_playing {
+        left: 430px;
+        width: calc(60% - 45px - 12rem);
+    }
+
+    #lcontrols #progressbar {
+        left: calc(445px + 8rem);
+        width: calc(100% - 460px - 8rem);
+    }
+
+    #play_queue {
+        left: 430px;
+        width: calc(100% - 445px);
     }
 }
