@@ -139,3 +139,67 @@
 #queue {
     display: none;
 }
+
+@-webkit-keyframes slideshow {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    43% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes slideshow {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    43% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+#pics {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    width: calc(100% - 445px);
+    height: calc(100% - 45px - 14rem);
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    div {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        -webkit-animation: slideshow 21s linear 0s infinite;
+        animation: slideshow 21s linear 0s infinite;
+    }
+
+    #p1 {
+        background-image: url("../pics/Flyleaf1.jpg");
+    }
+
+    #p2 {
+        background-image: url("../pics/Flyleaf2.jpg");
+
+        opacity: 0;
+        -webkit-animation-delay: 7s;
+        animation-delay: 7s;
+    }
+
+    #p3 {
+        background-image: url("../pics/Flyleaf3.jpg");
+
+        opacity: 0;
+        -webkit-animation-delay: 14s;
+        animation-delay: 14s;
+    }
+}
