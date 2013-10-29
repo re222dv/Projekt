@@ -245,6 +245,9 @@ main ul:last-of-child {
     left: 5rem;
     font-size: 1.1em; }
 
+#controls {
+  display: none; }
+
 #edit_track {
   display: none; }
 
@@ -512,8 +515,12 @@ main {
   #now_playing {
     left: 350px;
     bottom: 15px;
+    width: calc(100% - 365px - 12rem);
     height: 8rem;
-    background: none; }
+    overflow: hidden;
+    background: none;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
     #now_playing a {
       position: absolute;
       left: 0;
@@ -535,6 +542,60 @@ main {
       left: calc(8rem + 15px);
       bottom: 2.8rem;
       font-size: 1.7rem; }
+
+  #controls {
+    position: absolute;
+    right: 15px;
+    bottom: 4rem;
+    width: 12rem;
+    height: 4rem; }
+    #controls a {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: calc(2em - 27.5px);
+      margin: 0 auto;
+      width: 55px;
+      height: 55px;
+      color: transparent;
+      background-size: cover;
+      border-radius: 100%; }
+    #controls #prev_button {
+      right: 135px;
+      background-image: url("pics/prev.svg"); }
+    #controls #prev_button:hover, #controls #prev_button:focus, #controls #prev_button:active {
+      background-image: url("pics/prevglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 21px, transparent 22px); }
+    #controls #play_button {
+      bottom: calc(2em - 37.5px);
+      width: 75px;
+      height: 75px;
+      background-image: url("pics/play.svg"); }
+    #controls #play_button:hover, #controls #play_button:focus, #controls #play_button:active {
+      background-image: url("pics/playglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 31px, transparent 32px); }
+    #controls #next_button {
+      left: 135px;
+      background-image: url("pics/next.svg"); }
+    #controls #next_button:hover, #controls #next_button:focus, #controls #next_button:active {
+      background-image: url("pics/nextglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 21px, transparent 22px); }
+    #controls #progressbar {
+      position: fixed;
+      left: calc(365px + 8rem);
+      bottom: 15px;
+      width: calc(100% - 380px - 8rem);
+      height: 2rem;
+      background-image: url("pics/lines.svg"), linear-gradient(180deg, #42413c 0%, #3c3a30 100%);
+      border: 1px solid black;
+      border-radius: 10px; }
+      #controls #progressbar #handle {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 45%;
+        height: 100%;
+        border-radius: 10px;
+        background-image: linear-gradient(180deg, rgba(145, 37, 137, 0.69) 0%, rgba(135, 34, 127, 0.69) 50%, rgba(105, 33, 97, 0.69) 51%, rgba(119, 33, 111, 0.7) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, transparent 70%); }
 
   #play_queue {
     display: block;
