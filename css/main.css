@@ -245,8 +245,20 @@ main ul:last-of-child {
     left: 5rem;
     font-size: 1.1em; }
 
-#controls {
-  display: none; }
+#controls #play_button {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 5rem;
+  height: 5rem;
+  z-index: 20;
+  color: transparent;
+  background-image: url("pics/playnoring.svg");
+  background-size: cover;
+  border-left: 1px solid #2d2c27; }
+#controls #play_button:hover, #controls #play_button:focus, #controls #play_button:active {
+  background-image: url("pics/playglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 31px, transparent 32px); }
 
 #edit_track {
   display: none; }
@@ -567,6 +579,7 @@ main {
     #controls #prev_button:hover, #controls #prev_button:focus, #controls #prev_button:active {
       background-image: url("pics/prevglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 21px, transparent 22px); }
     #controls #play_button {
+      position: absolute;
       bottom: calc(2em - 37.5px);
       width: 75px;
       height: 75px;

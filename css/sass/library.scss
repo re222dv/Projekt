@@ -410,7 +410,26 @@ main {
 }
 
 #controls {
-    display: none;
+    #play_button {
+        display: block;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+
+        width: 5rem;
+        height: 5rem;
+
+        z-index: 20;
+
+        color: transparent;
+        background-image: url("pics/playnoring.svg");
+        background-size: cover;
+        border-left: 1px solid #2d2c27;
+    }
+
+    #play_button:hover, #play_button:focus, #play_button:active {
+        background-image: url("pics/playglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 31px, transparent 32px);
+    }
 }
 
 #edit_track {

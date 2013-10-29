@@ -110,6 +110,7 @@ main {
     }
 
     #play_button {
+        position: absolute;
         bottom: calc(2em - 37.5px);
 
         width: 75px;
