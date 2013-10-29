@@ -1,9 +1,9 @@
 #info {
     position: absolute;
     left: calc(30px + 14rem);
-    bottom: 15px;
+    bottom: calc(35px + 4rem);
 
-    height: 12rem;
+    height: 8rem;
 
     background: none;
 
@@ -55,7 +55,60 @@
 }
 
 #controls {
-    display: none;
+    position: absolute;
+    left: calc(30px + 14rem);
+    bottom: 20px;
+
+    width: 12rem;
+    height: 4rem;
+
+    a {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: calc(2em - 27.5px);
+        margin: 0 auto;
+
+        width: 55px;
+        height: 55px;
+
+        color: transparent;
+        background-size: cover;
+        border-radius: 100%;
+    }
+
+    #prev_button {
+        right: 135px;
+        background-image: url("pics/prev.svg");
+    }
+
+    #prev_button:hover, #prev_button:focus, #prev_button:active {
+        background-image: url("pics/prevglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 21px, transparent 22px);
+    }
+
+    #play_button {
+        position: absolute;
+        bottom: calc(2em - 37.5px);
+
+        width: 75px;
+        height: 75px;
+
+        background-image: url("pics/play.svg");
+    }
+
+    #play_button:hover, #play_button:focus, #play_button:active {
+        background-image: url("pics/playglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 31px, transparent 32px);
+    }
+
+    #next_button {
+        left: 135px;
+        background-image: url("pics/next.svg");
+    }
+
+    #next_button:hover, #next_button:focus, #next_button:active {
+        background-image: url("pics/nextglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 21px, transparent 22px);
+    }
 }
 
 #lyrics {
@@ -64,7 +117,7 @@
     right: 15px;
 
     width: 400px;
-    height: calc(100% - 45px);
+    height: calc(100% - 30px);
 
     background: none;
 

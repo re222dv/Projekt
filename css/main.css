@@ -658,8 +658,8 @@ main #search > ul {
   #info {
     position: absolute;
     left: calc(30px + 14rem);
-    bottom: 15px;
-    height: 12rem;
+    bottom: calc(35px + 4rem);
+    height: 8rem;
     background: none; }
     #info a {
       display: none; }
@@ -691,14 +691,48 @@ main #search > ul {
       width: 100%; }
 
   #controls {
-    display: none; }
+    position: absolute;
+    left: calc(30px + 14rem);
+    bottom: 20px;
+    width: 12rem;
+    height: 4rem; }
+    #controls a {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: calc(2em - 27.5px);
+      margin: 0 auto;
+      width: 55px;
+      height: 55px;
+      color: transparent;
+      background-size: cover;
+      border-radius: 100%; }
+    #controls #prev_button {
+      right: 135px;
+      background-image: url("pics/prev.svg"); }
+    #controls #prev_button:hover, #controls #prev_button:focus, #controls #prev_button:active {
+      background-image: url("pics/prevglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 21px, transparent 22px); }
+    #controls #play_button {
+      position: absolute;
+      bottom: calc(2em - 37.5px);
+      width: 75px;
+      height: 75px;
+      background-image: url("pics/play.svg"); }
+    #controls #play_button:hover, #controls #play_button:focus, #controls #play_button:active {
+      background-image: url("pics/playglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 31px, transparent 32px); }
+    #controls #next_button {
+      left: 135px;
+      background-image: url("pics/next.svg"); }
+    #controls #next_button:hover, #controls #next_button:focus, #controls #next_button:active {
+      background-image: url("pics/nextglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 21px, transparent 22px); }
 
   #lyrics {
     position: absolute;
     top: 15px;
     right: 15px;
     width: 400px;
-    height: calc(100% - 45px);
+    height: calc(100% - 30px);
     background: none;
     transition: none; }
     #lyrics a {
