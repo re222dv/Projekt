@@ -110,8 +110,8 @@ main #library {
           border-top: 1px solid #2d2c27; }
   main #library #artists > li > a > .name {
     top: 0;
-    height: 4em;
-    line-height: 3.5em;
+    height: 4rem;
+    line-height: 3.5rem;
     font-size: 1.3em; }
   main #library #albums li:target {
     max-height: 1000px; }
