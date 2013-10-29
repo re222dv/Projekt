@@ -270,6 +270,70 @@ main #search > ul {
 #edit_track {
   display: none; }
 
+#edit_track:target:before {
+  display: block;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+#edit_track:target {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 20px;
+  width: calc(80% - 40px);
+  height: calc(80% - 40px);
+  max-height: 500px;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px; }
+  #edit_track:target form {
+    margin: 0 auto;
+    max-width: 400px;
+    max-height: calc(100% - 60px);
+    overflow: auto; }
+  #edit_track:target label, #edit_track:target input {
+    margin-top: 10px; }
+  #edit_track:target label {
+    float: left;
+    padding: 5px 0;
+    padding-top: 6px;
+    width: 90px; }
+  #edit_track:target input {
+    float: right;
+    padding: 5px;
+    width: calc(100% - 110px);
+    border-radius: 5px; }
+  #edit_track:target input[type=submit] {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+    max-width: 400px;
+    height: 50px;
+    color: white;
+    background-color: #dd4814;
+    border: none;
+    font-size: 1.5rem; }
+
+@media only screen and (max-width: 350px) {
+  #edit_track:target {
+    top: 5%;
+    left: 5%;
+    padding: 20px;
+    width: calc(90% - 40px);
+    height: calc(90% - 40px); } }
 #play_queue {
   display: none; }
 
@@ -656,6 +720,14 @@ main #search > ul {
         background-image: linear-gradient(180deg, transparent 0%, rgba(119, 33, 111, 0.7) 30%, #77216f 50%, rgba(119, 33, 111, 0.7) 70%, transparent 100%); }
         #play_queue table .active td:first-child {
           background-image: linear-gradient(90deg, #dd4814 0%, rgba(221, 72, 20, 0.4) 30%, transparent 100%); }
+
+  #edit_track:target {
+    width: 420px; }
+    #edit_track:target form {
+      margin: 0 auto;
+      max-width: 400px;
+      max-height: 100%;
+      overflow: auto; }
 
   @import url(http://fonts.googleapis.com/css?family=Delius+Swash+Caps);
   #info {
