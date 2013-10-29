@@ -56,7 +56,7 @@
 
 #controls {
     position: absolute;
-    left: calc(30px + 14rem);
+    left: calc(80px + 14rem);
     bottom: 20px;
 
     width: 12rem;
@@ -109,6 +109,30 @@
     #next_button:hover, #next_button:focus, #next_button:active {
         background-image: url("pics/nextglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 21px, transparent 22px);
     }
+
+    #queue_button {
+        position: fixed;
+        left: calc(30px + 14rem);
+        bottom: 33px;
+        margin: 0;
+
+        width: 35px;
+        height: 35px;
+
+        border: 2px solid white;
+        border-radius: 5px;
+        background-image: url("pics/queue.svg");
+    }
+
+    #queue_button:hover, #queue_button:focus, #queue_button:active {
+        border-color: #dd4814;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-image: url("pics/queueglow.svg");
+    }
+
+    #lyrics_button {
+        display: none;
+    }
 }
 
 #lyrics {
@@ -137,7 +161,121 @@
 }
 
 #queue {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: -400px;
+
+    width: 400px;
+    height: 100%;
+
+    z-index: 10;
+
+    overflow: hidden;
+
+    background-image: url("pics/coverdark.svg");
+    background-position: center;
+    background-size: cover;
+
+    transition: all 1s;
+
+    ul {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        margin: 0;
+        padding: 1em;
+
+        width: 100%;
+        height: 100%;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        list-style: none;
+
+        li {
+            position: relative;
+
+            margin-top: 1em;
+            height: 4em;
+
+            padding: 0.5em;
+
+            background-image: linear-gradient(180deg,
+                rgba(35, 34, 30, 0.6) 0%,
+                rgba(45, 44, 39, 0.6) 40%,
+                rgba(45, 44, 39, 0.6) 60%,
+                rgba(35, 34, 30, 0.6) 100%);
+
+            border-radius: 15px;
+
+            img {
+                height: 4em;
+                width: 4em;
+
+                border-radius: 10px;
+            }
+
+            span {
+                display: block;
+                position: absolute;
+                left: 0;
+                padding-left: 5rem;
+
+                width: 100%;
+
+                font-size: 1em;
+
+            }
+
+            .name {
+                top: 0.5rem;
+                font-size: 1.2em;
+            }
+
+            .artist {
+                top: 1.9em;
+            }
+
+            .album {
+                top: 3.1em;
+            }
+        }
+
+        .active {
+            background-image: linear-gradient(180deg,
+                rgba(35, 34, 30, 0.6) 0%,
+                rgba(45, 44, 39, 0.6) 40%,
+                rgba(45, 44, 39, 0.6) 60%,
+                rgba(35, 34, 30, 0.6) 100%),
+            linear-gradient(130deg,
+                    #77216F 10%,
+                    transparent 40%,
+                    #dd4814 90%);
+        }
+    }
+
+    a {
+        display: block;
+        position: absolute;
+        right: 18.5px;
+        bottom: calc(3em - 18.5px);
+
+        width: 35px;
+        height: 35px;
+
+        color: transparent;
+        background-size: cover;
+
+        border: 2px solid #dd4814;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-image: url("pics/close.svg");
+    }
+}
+
+#queue:target {
+    left: 0;
 }
 
 @-webkit-keyframes slideshow {
