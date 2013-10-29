@@ -6,6 +6,19 @@ body {
     font-family: Ubuntu, sans-serif;
 }
 
+main {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    margin: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
 @import 'sass/library';
 
 @media only screen and (max-width: 800px) {

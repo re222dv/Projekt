@@ -4,6 +4,15 @@ body {
   overflow: hidden;
   font-family: Ubuntu, sans-serif; }
 
+main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
 main #nav {
   position: absolute;
   top: 0;
@@ -210,8 +219,6 @@ main #search > ul {
     height: 4em;
     line-height: 3.5em;
     font-size: 1.3em; }
-main ul:last-of-child {
-  background-color: red; }
 
 #now_playing {
   position: absolute;
@@ -267,132 +274,124 @@ main ul:last-of-child {
   display: none; }
 
 @media only screen and (max-width: 800px) {
-  main {
-    position: fixed;
+  main #info {
+    position: absolute;
     top: 0;
     left: 0;
-    margin: 0;
     width: 100%;
-    height: 100%;
-    overflow: hidden; }
-    main #info {
+    height: 4.1em;
+    z-index: 5;
+    background-image: linear-gradient(180deg, #626055 0%, #42413c 100%); }
+    main #info .title {
+      display: block;
+      margin-top: 1ex;
+      margin-left: 0.6rem;
+      height: 24px;
+      font-size: 1.3em;
+      width: 100%; }
+    main #info .artist {
+      float: left;
+      margin-top: 0.6ex;
+      margin-left: 0.6rem;
+      font-size: 1.1em; }
+    main #info .album:before {
+      float: left;
+      content: "\2022";
+      margin-left: 1ex;
+      margin-right: 1ex; }
+    main #info .album {
+      float: left;
+      margin-top: 0.8ex;
+      font-size: 1em; }
+    main #info a {
+      display: block;
+      position: absolute;
+      top: 0.7em;
+      right: 0.7em;
+      width: calc(2.6em - 4px);
+      height: calc(2.6em - 4px);
+      color: transparent;
+      background-size: cover;
+      border: 2px solid white;
+      border-radius: 5px;
+      background-image: url("pics/up.svg"); }
+    main #info a:hover, main #info a:focus, main #info a:active {
+      border-color: #dd4814;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-image: url("pics/upglow.svg"); }
+  main #albumart {
+    position: absolute;
+    top: 4.1em;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: calc(100% - 4.1em - 6em);
+    background-color: #2d2c27;
+    background-image: linear-gradient(180deg, #1d1c1b 0%, rgba(0, 0, 0, 0) 2%, rgba(0, 0, 0, 0) 98%, #1d1c1b 100%); }
+    main #albumart img {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 4.1em;
-      z-index: 5;
-      background-image: linear-gradient(180deg, #626055 0%, #42413c 100%); }
-      main #info .title {
-        display: block;
-        margin-top: 1ex;
-        margin-left: 0.6rem;
-        height: 24px;
-        font-size: 1.3em;
-        width: 100%; }
-      main #info .artist {
-        float: left;
-        margin-top: 0.6ex;
-        margin-left: 0.6rem;
-        font-size: 1.1em; }
-      main #info .album:before {
-        float: left;
-        content: "\2022";
-        margin-left: 1ex;
-        margin-right: 1ex; }
-      main #info .album {
-        float: left;
-        margin-top: 0.8ex;
-        font-size: 1em; }
-      main #info a {
-        display: block;
-        position: absolute;
-        top: 0.7em;
-        right: 0.7em;
-        width: calc(2.6em - 4px);
-        height: calc(2.6em - 4px);
-        color: transparent;
-        background-size: cover;
-        border: 2px solid white;
-        border-radius: 5px;
-        background-image: url("pics/up.svg"); }
-      main #info a:hover, main #info a:focus, main #info a:active {
-        border-color: #dd4814;
-        background-color: rgba(0, 0, 0, 0.5);
-        background-image: url("pics/upglow.svg"); }
-    main #albumart {
-      position: absolute;
-      top: 4.1em;
-      left: 0;
-      margin: 0 auto;
-      width: 100%;
-      height: calc(100% - 4.1em - 6em);
-      background-color: #2d2c27;
-      background-image: linear-gradient(180deg, #1d1c1b 0%, rgba(0, 0, 0, 0) 2%, rgba(0, 0, 0, 0) 98%, #1d1c1b 100%); }
-      main #albumart img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        width: 100%; }
-    main #controls {
-      position: absolute;
-      left: 0;
+      right: 0;
       bottom: 0;
-      width: 100%;
-      height: 6em;
-      background-image: linear-gradient(180deg, #3c3b37 0%, #42413c 100%); }
-      main #controls a {
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: calc(3em - 27.5px);
-        margin: 0 auto;
-        width: 55px;
-        height: 55px;
-        color: transparent;
-        background-size: cover;
-        border-radius: 100%; }
-      main #controls #prev_button {
-        right: 135px;
-        background-image: url("pics/prev.svg"); }
-      main #controls #prev_button:hover, main #controls #prev_button:focus, main #controls #prev_button:active {
-        background-image: url("pics/prevglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 21px, transparent 22px); }
-      main #controls #play_button {
-        bottom: calc(3em - 37.5px);
-        width: 75px;
-        height: 75px;
-        background-image: url("pics/play.svg"); }
-      main #controls #play_button:hover, main #controls #play_button:focus, main #controls #play_button:active {
-        background-image: url("pics/playglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 31px, transparent 32px); }
-      main #controls #next_button {
-        left: 135px;
-        background-image: url("pics/next.svg"); }
-      main #controls #next_button:hover, main #controls #next_button:focus, main #controls #next_button:active {
-        background-image: url("pics/nextglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 21px, transparent 22px); }
-      main #controls #queue_button, main #controls #lyrics_button {
-        left: 18.5px;
-        bottom: calc(3em - 18.5px);
-        margin: 0;
-        width: 35px;
-        height: 35px;
-        border: 2px solid white;
-        border-radius: 5px;
-        background-image: url("pics/queue.svg"); }
-      main #controls #lyrics_button {
-        left: calc(100% - 55.5px);
-        background-image: url("pics/lyrics.svg"); }
-      main #controls #queue_button:hover, main #controls #queue_button:focus, main #controls #queue_button:active {
-        border-color: #dd4814;
-        background-color: rgba(0, 0, 0, 0.5);
-        background-image: url("pics/queueglow.svg"); }
-      main #controls #lyrics_button:hover, main #controls #lyrics_button:focus, main #controls #lyrics_button:active {
-        border-color: #dd4814;
-        background-color: rgba(0, 0, 0, 0.5);
-        background-image: url("pics/lyricsglow.svg"); }
+      margin: auto;
+      width: 100%; }
+  main #controls {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6em;
+    background-image: linear-gradient(180deg, #3c3b37 0%, #42413c 100%); }
+    main #controls a {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: calc(3em - 27.5px);
+      margin: 0 auto;
+      width: 55px;
+      height: 55px;
+      color: transparent;
+      background-size: cover;
+      border-radius: 100%; }
+    main #controls #prev_button {
+      right: 135px;
+      background-image: url("pics/prev.svg"); }
+    main #controls #prev_button:hover, main #controls #prev_button:focus, main #controls #prev_button:active {
+      background-image: url("pics/prevglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 21px, transparent 22px); }
+    main #controls #play_button {
+      bottom: calc(3em - 37.5px);
+      width: 75px;
+      height: 75px;
+      background-image: url("pics/play.svg"); }
+    main #controls #play_button:hover, main #controls #play_button:focus, main #controls #play_button:active {
+      background-image: url("pics/playglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 31px, transparent 32px); }
+    main #controls #next_button {
+      left: 135px;
+      background-image: url("pics/next.svg"); }
+    main #controls #next_button:hover, main #controls #next_button:focus, main #controls #next_button:active {
+      background-image: url("pics/nextglow.svg"), radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 21px, transparent 22px); }
+    main #controls #queue_button, main #controls #lyrics_button {
+      left: 18.5px;
+      bottom: calc(3em - 18.5px);
+      margin: 0;
+      width: 35px;
+      height: 35px;
+      border: 2px solid white;
+      border-radius: 5px;
+      background-image: url("pics/queue.svg"); }
+    main #controls #lyrics_button {
+      left: calc(100% - 55.5px);
+      background-image: url("pics/lyrics.svg"); }
+    main #controls #queue_button:hover, main #controls #queue_button:focus, main #controls #queue_button:active {
+      border-color: #dd4814;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-image: url("pics/queueglow.svg"); }
+    main #controls #lyrics_button:hover, main #controls #lyrics_button:focus, main #controls #lyrics_button:active {
+      border-color: #dd4814;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-image: url("pics/lyricsglow.svg"); }
 
   #queue {
     position: fixed;
@@ -513,14 +512,14 @@ main ul:last-of-child {
     height: 100%;
     background-color: #2d2c27; }
 
-  main {
+  #lmain {
     top: 15px;
     left: 15px;
     width: 40%;
     height: calc(100% - 30px);
     border: 1px solid black;
     border-radius: 10px; }
-    main #library, main #search {
+    #lmain #library, #lmain #search {
       height: calc(100% - 4.1em); }
 
   #now_playing {
@@ -538,6 +537,20 @@ main ul:last-of-child {
       bottom: 0;
       width: 8rem;
       height: 8rem; }
+    #now_playing a:hover, #now_playing a:focus {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-top: 2px;
+      padding-left: 10px;
+      padding-right: 10px;
+      overflow: hidden;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      font-size: 1.5rem;
+      text-align: center;
+      text-decoration: none;
+      white-space: pre-wrap; }
     #now_playing img {
       top: auto;
       left: 0;
@@ -642,9 +655,6 @@ main ul:last-of-child {
         #play_queue table .active td:first-child {
           background-image: linear-gradient(90deg, #dd4814 0%, rgba(221, 72, 20, 0.4) 30%, transparent 100%); }
 
-  main {
-    border: 0; }
-
   #info {
     position: absolute;
     left: calc(30px + 14rem);
@@ -702,7 +712,7 @@ main ul:last-of-child {
   #queue {
     display: none; } }
 @media only screen and (min-width: 800px) and (min-width: 1000px) {
-  main {
+  #lmain {
     width: 400px; }
 
   #now_playing {
