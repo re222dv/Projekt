@@ -568,6 +568,10 @@ main #search > ul {
 
   #lyrics:target {
     left: 0; } }
+@media only screen and (max-width: 800px) and (orientation:landscape) {
+  main #albumart img {
+    width: auto;
+    height: 100%; } }
 @media only screen and (min-width: 800px) {
   body {
     position: absolute;

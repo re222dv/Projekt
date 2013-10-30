@@ -367,3 +367,10 @@ main {
 #lyrics:target {
     left: 0;
 }
+
+@media (orientation:landscape) {
+    main #albumart img {
+        width: auto;
+        height: 100%;
+    }
+}
