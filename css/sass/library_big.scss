@@ -226,6 +226,10 @@ body {
             text-align: right;
         }
 
+        tr:hover, tr:focus {
+            background-color: rgba(119, 33, 111, 0.3);
+        }
+
         .active {
             background-image: linear-gradient(180deg,
                 transparent 0%,
