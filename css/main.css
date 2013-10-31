@@ -13,6 +13,9 @@ main {
   height: 100%;
   overflow: hidden; }
 
+h1 {
+  display: none; }
+
 main #nav {
   position: absolute;
   top: 0;
@@ -184,7 +187,7 @@ main #search > ul {
   list-style: none;
   overflow-x: hidden;
   overflow-y: auto; }
-  main #search > ul h1 {
+  main #search > ul h2 {
     margin-bottom: 0; }
   main #search > ul ul {
     padding: 0;
